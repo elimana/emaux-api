@@ -1,21 +1,29 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "emaux-api"
+name = "emaux_api"
 version = "0.1.0"
 authors = [
     { name="Eli Mana", email="elimana97@gmail.com" }
 ]
 description = "A simple api to connect to an Emaux SPV pool pump."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
-    "aiohttp"
+    "aiohttp",
+    "pytest-asyncio"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
