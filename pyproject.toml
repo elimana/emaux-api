@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emaux-api"
+version = "0.1.0"
+authors = [
+    { name="Eli Mana", email="elimana97@gmail.com" }
+]
+description = "A simple api to connect to an Emaux SPV pool pump."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
